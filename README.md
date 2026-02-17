@@ -1,5 +1,5 @@
 # Nate’s GitHub Analytics Project
-<img width="1310" height="859" alt="Screenshot 2026-02-16 233620" src="https://github.com/user-attachments/assets/b78d312c-f2eb-4411-bf39-14efed2ce7b3" />
+<img width="1311" height="853" alt="Screenshot 2026-02-17 111112" src="https://github.com/user-attachments/assets/b0069ad8-3cf6-43f8-b826-3fbc4fae0086" />
 
 A lightweight **PyQt5 desktop app** (plus optional CLI) that pulls **GitHub repo analytics** into a clean, sortable table — including **release download totals** and **commit counts**, with optional **traffic metrics** (views/clones) when your token permissions allow it.
 
