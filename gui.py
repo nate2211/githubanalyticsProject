@@ -600,6 +600,9 @@ class MainWindow(QMainWindow):
         errs = data.get("errors") or []
         totals = data.get("totals") or {}
 
+        # 1. LOCK THE TABLE
+        self.table.setSortingEnabled(False)
+        self.table.setRowCount(0)  # Clear it out first
         self.table.setRowCount(len(repos))
 
         warnings: List[str] = []
@@ -662,6 +665,8 @@ class MainWindow(QMainWindow):
                     it.setTextAlignment(Qt.AlignRight | Qt.AlignVCenter)
                 self.table.setItem(i, col, it)
 
+        # 2. UNLOCK THE TABLE ONCE DATA IS LOADED
+        self.table.setSortingEnabled(True)
         # details raw json
         self.details.setPlainText(json.dumps(data, indent=2))
 
